@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#f4f1e9" />
+		<meta name="description" content="A considered collection of design work by Shreya." />
+		<title>Shreya — Selected Work</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="main.css" />
+		<script type="module" src="script.js"></script>
+	</head>
+	<body>
+		<header class="topbar">
+			<a class="wordmark" href="#top" aria-label="Shreya portfolio home">shreya<span>.</span></a>
+			<div class="topbar-note"><span class="status-dot"></span> Design portfolio</div>
+			<button class="open-button" id="open-pdf" type="button"><span class="button-icon" aria-hidden="true">↗</span> Open portfolio</button>
+		</header>
+
+		<main id="top">
+			<section class="intro" aria-labelledby="page-title">
+				<div class="intro-copy">
+					  <p class="eyebrow">SELECTED WORK <span>·</span> PORTFOLIO PDF</p>
+					<h1 id="page-title">Ideas made <em>tangible.</em></h1>
+					<p class="intro-description">A collection of thoughtful digital experiences, identities, and things in between.</p>
+				</div>
+				<div class="intro-aside"><span class="aside-mark" aria-hidden="true">✳</span><span>Scroll through<br />the work</span></div>
+			</section>
+
+			<section class="workspace" aria-label="Portfolio PDF viewer">
+				<aside class="rail" aria-label="Portfolio pages">
+					<div class="rail-heading"><span>IN THIS PORTFOLIO</span><span id="rail-count">—</span></div>
+					<div class="thumbnail-list" id="thumbnail-list">
+						<div class="rail-empty">Your pages<br />will live here.</div>
+					</div>
+					<div class="rail-foot"><span class="rail-line"></span><span>SHREYA / PORTFOLIO</span></div>
+				</aside>
+
+				<div class="viewer-column">
+					<div class="viewer-toolbar">
+						<div class="document-name" id="document-name"><span class="file-mark" aria-hidden="true">PDF</span><span>Portfolio document</span></div>
+						<div class="viewer-controls" aria-label="PDF controls">
+							<button class="icon-button" id="previous-page" type="button" aria-label="Previous page" title="Previous page" disabled>←</button>
+							<div class="page-count"><input id="page-number" aria-label="Current page" type="number" min="1" value="1" disabled /><span>/</span><span id="total-pages">—</span></div>
+							<button class="icon-button" id="next-page" type="button" aria-label="Next page" title="Next page" disabled>→</button>
+							<span class="control-divider"></span>
+							<button class="icon-button zoom-button" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out" disabled>−</button>
+							<span class="zoom-level" id="zoom-level">Fit</span>
+							<button class="icon-button zoom-button" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in" disabled>+</button>
+							<span class="control-divider"></span>
+							<button class="icon-button fullscreen-button" id="fullscreen" type="button" aria-label="Toggle fullscreen" title="Toggle fullscreen">⛶</button>
+						</div>
+					</div>
+
+					<div class="stage" id="stage">
+						<div class="empty-state" id="empty-state">
+							<div class="empty-art" aria-hidden="true"><span class="art-sun"></span><span class="art-sheet art-sheet-back"></span><span class="art-sheet art-sheet-front"><i></i><i></i><i></i></span><span class="art-spark">✳</span></div>
+							<p class="empty-kicker">A LITTLE SPACE FOR GOOD IDEAS</p>
+							<h2>Your next favorite<br /><em>project starts here.</em></h2>
+							<p class="empty-description">Open the portfolio PDF to explore the full collection.</p>
+							<button class="choose-button" id="choose-pdf" type="button"><span aria-hidden="true">↑</span> Choose a PDF</button>
+							<p class="drop-hint">or drop a PDF anywhere on this page</p>
+						</div>
+						<div class="page-wrap" id="page-wrap" hidden>
+							<canvas id="pdf-canvas" aria-label="Portfolio page"></canvas>
+						</div>
+						<div class="loading-state" id="loading-state" hidden><span class="loader"></span><span>Opening your portfolio…</span></div>
+						<div class="error-state" id="error-state" hidden></div>
+					</div>
+					<div class="viewer-caption"><span id="page-caption">THE WORK, AT YOUR OWN PACE</span><span>↗ <a href="#top" id="download-link" hidden>Download PDF</a><span id="caption-note"> One page at a time.</span></span></div>
+				</div>
+			</section>
+			<footer class="page-footer"><span>GOOD WORK TAKES A LITTLE SPACE.</span><span>MADE WITH INTENTION <span class="footer-star">✳</span></span></footer>
+		</main>
+		<input id="file-input" type="file" accept="application/pdf,.pdf" hidden />
+		<div class="toast" id="toast" role="status" aria-live="polite"></div>
+	</body>
+</html>
